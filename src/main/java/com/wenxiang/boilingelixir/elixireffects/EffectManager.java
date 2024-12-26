@@ -1,9 +1,6 @@
 package com.wenxiang.boilingelixir.elixireffects;
 
-import com.wenxiang.boilingelixir.BoilingElixir;
-import com.wenxiang.boilingelixir.components.ElixirEffects;
 import com.wenxiang.boilingelixir.components.ModComponents;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -40,6 +37,9 @@ public class EffectManager {
             switch (entry.getKey()) {
                 case "explosion"://爆炸
                     elixirEffectList.addLast(new Explosion((float)entry.getValue()));
+                    break;
+                case "growth":
+                    elixirEffectList.addLast(new Growth((float)entry.getValue()));
                     break;
             }
         }

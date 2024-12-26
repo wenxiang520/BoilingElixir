@@ -1,4 +1,5 @@
 {
   "item.boiling_elixir.tooltip.title": "此物品含有以下效果：",
-  "item.boiling_elixir.elixir_effects.explosion": "爆炸"
+  "item.boiling_elixir.elixir_effects.explosion": "爆炸",
+  "item.boiling_elixir.elixir_effects.growth": "生长"
 }

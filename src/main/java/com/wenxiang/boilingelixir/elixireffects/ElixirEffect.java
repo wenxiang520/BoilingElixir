@@ -10,4 +10,5 @@ public class ElixirEffect {
     protected float power;
 
     void onDrink(Level world, LivingEntity user, ItemStack stack){}
+    void onCollision(Level world, LivingEntity user, ItemStack stack){}
 }
