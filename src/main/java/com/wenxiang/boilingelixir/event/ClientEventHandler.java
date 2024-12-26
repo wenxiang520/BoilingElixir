@@ -10,20 +10,9 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 public class ClientEventHandler {
     @SubscribeEvent
     public void onRegisterColor(RegisterColorHandlersEvent event){
-        event.register(ResourceLocation.withDefaultNamespace("elixir_color"), ElixirColor.MAP_CODEC);
+//        event.register(ResourceLocation.withDefaultNamespace("elixir_color"), ElixirColor.MAP_CODEC);
 //        BoilingElixir.LOGGER.info("Registering color handlers");
     }
-
-//    @SubscribeEvent
-//    public void gatherData(GatherDataEvent event){
-//        DataGenerator gen = event.getGenerator();
-//        PackOutput output =gen.getPackOutput();
-//        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-//
-//        gen.addProvider(
-//                new ItemModelProvider(output,existingFileHelper)
-//        );
-//    }
 
 
 

@@ -11,6 +11,6 @@ import net.neoforged.neoforge.common.NeoForge;
 @Mod(value = BoilingElixir.MODID,dist = Dist.CLIENT)
 public class BoilingElixirClient {
     public BoilingElixirClient(IEventBus modBus) {
-        modBus.register(new ClientEventHandler());
+//        modBus.register(new ClientEventHandler());
     }
 }
