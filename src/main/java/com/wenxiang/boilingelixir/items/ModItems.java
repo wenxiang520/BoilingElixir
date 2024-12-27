@@ -11,7 +11,7 @@ import static net.minecraft.world.item.Items.GLASS_BOTTLE;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
-    public static final DeferredItem<Item> POTION = ITEMS.registerSimpleItem("potion", new Potion.Properties().usingConvertsTo(GLASS_BOTTLE));
+//    public static final DeferredItem<Item> POTION = ITEMS.registerSimpleItem("potion", new Potion.Properties().usingConvertsTo(GLASS_BOTTLE));
 
 
     public static void init(IEventBus modEventBus) {
