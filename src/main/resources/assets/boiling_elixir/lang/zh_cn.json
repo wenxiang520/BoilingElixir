@@ -1,5 +1,7 @@
 {
   "item.boiling_elixir.tooltip.title": "此物品含有以下效果：",
   "item.boiling_elixir.elixir_effects.explosion": "爆炸",
-  "item.boiling_elixir.elixir_effects.growth": "生长"
+  "item.boiling_elixir.elixir_effects.growth": "生长",
+  "item.boiling_elixir.elixir": "药水",
+  "item.boiling_elixir.thrown_elixir": "投掷药水"
 }

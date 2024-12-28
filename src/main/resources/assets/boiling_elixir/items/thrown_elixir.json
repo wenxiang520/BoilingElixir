@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "boiling_elixir:item/thrown_elixir"
+  }
+}
