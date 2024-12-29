@@ -1,6 +1,12 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "boiling_elixir:item/elixir"
+    "model": "boiling_elixir:item/elixir",
+    "tints": [
+      {
+        "type": "minecraft:dye",
+        "default": -13083194
+      }
+    ]
   }
 }

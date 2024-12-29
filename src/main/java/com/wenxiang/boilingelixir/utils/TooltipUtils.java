@@ -25,9 +25,6 @@ public class TooltipUtils {
                 event.getToolTip().addLast(newline);
             }
             //渲染“物品颜色”tooltip
-            if(event.getFlags().isAdvanced()){
-                event.getToolTip().addLast(Component.translatable("item.color",ColorUtils.intToColorCode(elixirEffects.color())).withStyle(ChatFormatting.GRAY));
-            }
         }
     }
 }

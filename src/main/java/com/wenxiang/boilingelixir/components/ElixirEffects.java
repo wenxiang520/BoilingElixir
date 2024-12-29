@@ -17,23 +17,20 @@ import java.util.List;
 import static com.wenxiang.boilingelixir.elixireffects.EffectManager.drink;
 
 
-public record ElixirEffects(int color ,List<String> effects) implements ConsumableListener {
+public record ElixirEffects(List<String> effects) implements ConsumableListener {
 
     public static final Codec<ElixirEffects> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            Codec.INT.fieldOf("color").forGetter(ElixirEffects::color),
             Codec.list(Codec.STRING).fieldOf("effects").forGetter(ElixirEffects::effects)
             ).apply(instance, ElixirEffects::new)
     );
     public static final StreamCodec<ByteBuf, ElixirEffects> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.INT,ElixirEffects::color,
             ByteBufCodecs.STRING_UTF8.apply(ByteBufCodecs.list()), ElixirEffects::effects,
             ElixirEffects::new
     );
 
 
-    public ElixirEffects(int color,List<String> effects) {
+    public ElixirEffects(List<String> effects) {
         this.effects = effects;
-        this.color = color;
     }
 
 
