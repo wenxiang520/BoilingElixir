@@ -1,5 +1,7 @@
 package com.wenxiang.boilingelixir.items;
 
+import com.wenxiang.boilingelixir.BoilingElixir;
+import com.wenxiang.boilingelixir.entity.ThrownElixirEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
@@ -22,6 +24,8 @@ public class ThrownElixirItem extends ElixirItem{
         ItemStack itemstack = user.getItemInHand(interactionHand);
         if (world instanceof ServerLevel serverlevel) {
 //            Projectile.spawnProjectileFromRotation(ThrownPotion::new, serverlevel, itemstack, user, -20.0F, 0.5F, 1.0F);
+
+Projectile.spawnProjectileFromRotation(ThrownElixirEntity::new, serverlevel, itemstack, user, -20.0F, 0.5F, 1.0F);
         }
 
         user.awardStat(Stats.ITEM_USED.get(this));

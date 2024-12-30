@@ -1,5 +1,6 @@
 package com.wenxiang.boilingelixir.elixireffects;
 
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -18,8 +19,11 @@ public class Explosion extends ElixirEffect {
     }
 
     @Override
-    public void onCollision(Level world, LivingEntity user, ItemStack stack) {
-
+    public void onCollision(Level world, LivingEntity user, Entity entity, ItemStack stack) {
+        if (!world.isClientSide())
+        {
+        world.explode(entity, entity.getX(), entity.getY(), entity.getZ(), power, Level.ExplosionInteraction.MOB);
+        }
     }
 
 }

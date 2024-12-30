@@ -1,6 +1,8 @@
 package com.wenxiang.boilingelixir.elixireffects;
 
+import com.wenxiang.boilingelixir.BoilingElixir;
 import com.wenxiang.boilingelixir.components.ModComponents;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -18,20 +20,36 @@ public class EffectManager {
     }
 
     public static void drink(Level level, LivingEntity user, ItemStack stack){
+        if (getElixirEffectList(stack).isEmpty()) {
+            return;
+        }
         getElixirEffectList(stack).forEach(effect -> {
             effect.onDrink(level,user,stack);
+        });
+    }
+
+    public static void onCollision(Level level, LivingEntity user, Entity entity, ItemStack stack){
+        if (getElixirEffectList(stack).isEmpty()) {
+            return;
+        }
+        getElixirEffectList(stack).forEach(effect -> {
+            effect.onCollision(level,user,entity,stack);
         });
     }
 
 
 
 
-
     //从物品叠中获取ElixirEffectList
     public static List<ElixirEffect> getElixirEffectList(ItemStack stack){
+        if (!stack.has(ModComponents.ELIXIR_EFFECTS)){
+            return Collections.emptyList();
+        }
         var effects = Objects.requireNonNull(stack.get(ModComponents.ELIXIR_EFFECTS)).effects();
-        var effects_format = countStringFrequencies(effects);
         List<ElixirEffect> elixirEffectList = new ArrayList<>();
+
+
+        var effects_format = countStringFrequencies(effects);
         //循环读取,顺便转换为float
         for (Map.Entry<String,Integer> entry: effects_format.entrySet()) {
             switch (entry.getKey()) {
