@@ -1,6 +1,7 @@
 package com.wenxiang.boilingelixir.entity;
 
 import com.wenxiang.boilingelixir.elixireffects.EffectManager;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrownPotion;
@@ -22,6 +23,8 @@ public class ThrownElixirEntity extends ThrownPotion {
     public ThrownElixirEntity(Level level, double x, double y, double z, ItemStack item) {
         super(level, x, y, z, item);
     }
+
+
 
     @Override
     protected void onHitBlock(BlockHitResult result) {

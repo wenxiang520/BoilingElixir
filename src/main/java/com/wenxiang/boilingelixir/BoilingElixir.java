@@ -2,6 +2,7 @@ package com.wenxiang.boilingelixir;
 
 import com.mojang.logging.LogUtils;
 import com.wenxiang.boilingelixir.components.ModComponents;
+import com.wenxiang.boilingelixir.entity.ModEntities;
 import com.wenxiang.boilingelixir.items.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -17,6 +18,7 @@ public class BoilingElixir {
     public BoilingElixir(IEventBus modEventBus, ModContainer modContainer) {
         ModItems.init(modEventBus);//传入modEventBus进行初始化物品
         ModComponents.init(modEventBus);//传入modEventBus进行初始化物品数据组件
+        ModEntities.init(modEventBus);
     }
 
 
