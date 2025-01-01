@@ -56,9 +56,15 @@ public class EffectManager {
                 case "explosion"://爆炸
                     elixirEffectList.addLast(new Explosion((float)entry.getValue()));
                     break;
+
                 case "growth":
                     elixirEffectList.addLast(new Growth((float)entry.getValue()));
                     break;
+
+                case "freeze":
+                    elixirEffectList.addLast(new Freeze((float)entry.getValue()));
+                    break;
+
             }
         }
         return elixirEffectList;

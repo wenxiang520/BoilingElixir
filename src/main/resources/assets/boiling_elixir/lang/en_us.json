@@ -2,6 +2,7 @@
   "item.boiling_elixir.tooltip.title": "This item has the following effects:",
   "item.boiling_elixir.elixir_effects.explosion": "Explosion",
   "item.boiling_elixir.elixir_effects.growth": "Growth",
+  "item.boiling_elixir.elixir_effects.freeze": "Freeze",
   "item.boiling_elixir.elixir": "Elixir",
   "item.boiling_elixir.thrown_elixir": "Thrown Elixir"
 }

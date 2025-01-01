@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -39,4 +40,17 @@ public class BlockUtils {
             }
         }
     }
+
+    public static void freeze(Level world, BlockPos pos) {
+        BlockState blockstate = world.getBlockState(pos);
+        if (world instanceof ServerLevel){
+            if (blockstate.isSolid()&&world.getBlockState(pos.above()).isAir()){
+                world.setBlock(pos.above(), Blocks.SNOW.defaultBlockState(),3);
+            }else if (blockstate.is(Blocks.WATER)&&world.getBlockState(pos.above()).isAir()){
+                world.setBlock(pos, Blocks.ICE.defaultBlockState(),3);
+            }
+        }
+    }
+
+
 }
