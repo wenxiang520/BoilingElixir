@@ -1,8 +1,10 @@
 package com.wenxiang.boilingelixir.items;
 
+import com.wenxiang.boilingelixir.blocks.ModBlocks;
 import net.minecraft.ResourceLocationException;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -20,6 +22,9 @@ public class ModItems {
         ThrownElixirItem::new,
         new Item.Properties().stacksTo(1)
 );
+    public static final DeferredItem<BlockItem> ALCHEMY_TABLE = ITEMS.registerSimpleBlockItem(
+            ModBlocks.ALCHEMY_TABLE
+    );
 
     public static void init(IEventBus modEventBus) {
         ITEMS.register(modEventBus);//注册物品

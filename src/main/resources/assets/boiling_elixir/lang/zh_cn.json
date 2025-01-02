@@ -4,5 +4,6 @@
   "item.boiling_elixir.elixir_effects.growth": "生长",
   "item.boiling_elixir.elixir_effects.freeze": "冻结",
   "item.boiling_elixir.elixir": "药水",
-  "item.boiling_elixir.thrown_elixir": "投掷药水"
+  "item.boiling_elixir.thrown_elixir": "投掷药水",
+  "block.boiling_elixir.alchemy_table": "炼金桌"
 }

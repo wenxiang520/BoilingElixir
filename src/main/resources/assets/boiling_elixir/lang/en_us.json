@@ -4,5 +4,6 @@
   "item.boiling_elixir.elixir_effects.growth": "Growth",
   "item.boiling_elixir.elixir_effects.freeze": "Freeze",
   "item.boiling_elixir.elixir": "Elixir",
-  "item.boiling_elixir.thrown_elixir": "Thrown Elixir"
+  "item.boiling_elixir.thrown_elixir": "Thrown Elixir",
+  "block.boiling_elixir.alchemy_table": "Alchemy Table"
 }
