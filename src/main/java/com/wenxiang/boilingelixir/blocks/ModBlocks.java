@@ -13,9 +13,9 @@ import static com.wenxiang.boilingelixir.BoilingElixir.MODID;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-    public static final DeferredBlock<Block> ALCHEMY_TABLE = BLOCKS.register(
+    public static final DeferredBlock<AlchemyTableBlock> ALCHEMY_TABLE = BLOCKS.register(
             "alchemy_table",
-            registryName->new Block(BlockBehaviour.Properties.of()
+            registryName->new AlchemyTableBlock(BlockBehaviour.Properties.of()
                     .setId(ResourceKey.create(Registries.BLOCK,registryName))
                     .destroyTime(2f)
                     .explosionResistance(10f)
