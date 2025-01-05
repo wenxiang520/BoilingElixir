@@ -1,6 +1,7 @@
 package com.wenxiang.boilingelixir.datagen;
 
 import com.wenxiang.boilingelixir.BoilingElixir;
+import com.wenxiang.boilingelixir.blocks.ModBlocks;
 import com.wenxiang.boilingelixir.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -22,5 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer0", "minecraft:item/potion_overlay")
                 .texture("layer1", "minecraft:item/splash_potion");
 
+        this.simpleBlockItem(ModBlocks.ALCHEMY_TABLE.getId());
     }
+
 }
