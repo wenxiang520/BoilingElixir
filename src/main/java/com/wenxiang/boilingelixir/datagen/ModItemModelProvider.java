@@ -23,7 +23,6 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer0", "minecraft:item/potion_overlay")
                 .texture("layer1", "minecraft:item/splash_potion");
 
-        this.simpleBlockItem(ModBlocks.ALCHEMY_TABLE.getId());
     }
 
 }
